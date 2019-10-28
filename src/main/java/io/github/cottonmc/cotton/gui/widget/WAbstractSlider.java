@@ -218,13 +218,21 @@ public abstract class WAbstractSlider extends WWidget {
 	}
 
 	public void setMinValue(int min) {
-		int original = this.min;
 		this.min = min;
+		if (value < min) {
+			value = min;
+			onValueChanged(value);
+			if (draggingFinishedListener != null) draggingFinishedListener.accept(value);
+		}
 	}
 
 	public void setMaxValue(int max) {
-		int original = this.max;
 		this.max = max;
+		if (value > max) {
+			value = max;
+			onValueChanged(value);
+			if (draggingFinishedListener != null) draggingFinishedListener.accept(value);
+		}
 	}
 
 	public Axis getAxis() {
