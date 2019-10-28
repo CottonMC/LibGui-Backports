@@ -143,6 +143,19 @@ public class CottonScreen<T extends CottonScreenController> extends AbstractCont
 		}
 		return result;
 	}
+
+	@Override
+	public boolean mouseScrolled(double mouseX, double mouseY, double amount) {
+		if (container.getRootPanel()==null) return super.mouseScrolled(mouseX, mouseY, amount);
+
+		WPanel root = container.getRootPanel();
+		int containerX = (int)mouseX-left;
+		int containerY = (int)mouseY-top;
+
+		WWidget child = root.hit(containerX, containerY);
+		child.onMouseScroll(containerX - child.getAbsoluteX(), containerY - child.getAbsoluteY(), amount);
+		return true;
+	}
 	
 	//Zapping this method may fix some positioning bugs - but may cause some backgroundPainter bugs. Will need to monitor.
 	/*

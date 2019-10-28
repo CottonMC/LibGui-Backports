@@ -158,6 +158,19 @@ public class ClientCottonScreen extends Screen {
 		}
 		return result;
 	}
+
+	@Override
+	public boolean mouseScrolled(double mouseX, double mouseY, double amount) {
+		if (description.getRootPanel()==null) return super.mouseScrolled(mouseX, mouseY, amount);
+
+		WPanel root = description.getRootPanel();
+		int containerX = (int)mouseX-left;
+		int containerY = (int)mouseY-top;
+
+		WWidget child = root.hit(containerX, containerY);
+		child.onMouseScroll(containerX - child.getAbsoluteX(), containerY - child.getAbsoluteY(), amount);
+		return true;
+	}
 	
 	@Override
 	public boolean charTyped(char ch, int keyCode) {

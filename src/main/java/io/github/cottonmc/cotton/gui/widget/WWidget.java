@@ -107,6 +107,15 @@ public class WWidget {
 	public WWidget onMouseUp(int x, int y, int button) {
 		return this;
 	}
+
+	/**
+	 * Notifies this widget that the mouse has been scrolled inside its bounds.
+	 * @param x The X coordinate of the event, in widget-space (0 is the left edge of this widget)
+	 * @param y The Y coordinate of the event, in widget-space (0 is the top edge of this widget)
+	 * @param amount The scrolled amount. Positive values are up and negative values are down.
+	 */
+	public void onMouseScroll(int x, int y, double amount) {
+	}
 	
 	/**
 	 * Notifies this widget that the mouse has been pressed and released, both while inside its bounds.
