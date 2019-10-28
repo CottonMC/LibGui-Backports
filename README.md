@@ -1,17 +1,11 @@
 <img src="doc/icon.png" align="right" width="180px"/>
 
-# LibGui
+# LibGui Backports
 
-Minecraft GUIs without spending forever painstakingly aligning things to the background image.
-Instead, LibGui takes a logical description of your GUI, and draws it on-the-fly like any modern
-GUI system. Controls can be hung on an itemslot grid or offset from it. Panel styles, colors,
-and opacity can be customized, and everything can be extended.
-
+A fork of the [LibGui library](https://github.com/CottonMC/LibGui) for Minecraft 1.14.
 
 See the [Cotton wiki](https://cottonmc.github.io/Wiki/getting_started/SetupDeveloper.html) for setup
 
 And for code examples:
 * [Client-Only Guis](https://github.com/CottonMC/LibGui/wiki/Client-Sided-Guis) 
 * [Inventory Guis](https://github.com/CottonMC/LibGui/wiki/Getting-Started-with-GUIs)
-
-For an idea of what's coming down the road for all my projects, you can check my roadmap at https://trello.com/b/0TVU8d63/falkreons-roadmap
