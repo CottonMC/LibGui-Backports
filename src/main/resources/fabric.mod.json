@@ -9,7 +9,7 @@
     "Falkreon"
   ],
   "contact": {
-    "sources": "https://github.com/CottonMC/LibGUI"
+    "sources": "https://github.com/CottonMC/LibGui-Backports"
   },
 
   "license": "MIT",
@@ -29,7 +29,6 @@
   },
 
   "custom": {
-  	"modmenu:api": true,
-  	"modmenu:clientsideOnly": false
+  	"modmenu:api": true
   }
 }
